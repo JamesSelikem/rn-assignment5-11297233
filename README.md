@@ -34,3 +34,8 @@ The theme switching feature is implemented using React's Context API and the use
 
 ## Applying Themes in Screens
 Components use the useContext hook to access the current theme and apply styles conditionally.
+
+![alt text](image.png)
+![alt text](image-1.png)
+![alt text](image-2.png)
+![alt text](image-3.png)
