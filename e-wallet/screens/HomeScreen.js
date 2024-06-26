@@ -1,5 +1,6 @@
 import React from 'react';
-import { View, Text, StyleSheet, Image, FlatList } from 'react-native';
+import { View, Text, StyleSheet, Image, FlatList, TouchableOpacity } from 'react-native';
+import Footer from '../components/Footer';
 
 const transactions = [
   { id: '1', name: '      Apple Store', category: '      Entertainment', amount: '- $5,99', icon: require('../assets/apple.png') },
@@ -15,7 +16,7 @@ const HomeScreen = () => {
         <Image source={require('../assets/profile.png')} style={styles.profileImage} />
         <View>
           <Text style={styles.welcomeText}>Welcome back,</Text>
-          <Text style={styles.nameText}>Eric Atsu</Text>
+          <Text style={styles.nameText}>James Atsu</Text>
         </View>
         <Image source={require('../assets/search.png')} style={styles.searchIcon} />
       </View>
@@ -59,24 +60,7 @@ const HomeScreen = () => {
         )}
       />
 
-      <View style={styles.footer}>
-        <View style={styles.footerItem}>
-          <Image source={require('../assets/home.png')} style={styles.footerIcon} />
-          <Text style={styles.footerText}>Home</Text>
-        </View>
-        <View style={styles.footerItem}>
-          <Image source={require('../assets/mycards.png')} style={styles.footerIcon} />
-          <Text style={styles.footerText}>My Cards</Text>
-        </View>
-        <View style={styles.footerItem}>
-          <Image source={require('../assets/statistics.png')} style={styles.footerIcon} />
-          <Text style={styles.footerText}>Statistics</Text>
-        </View>
-        <View style={styles.footerItem}>
-          <Image source={require('../assets/settings.png')} style={styles.footerIcon} />
-          <Text style={styles.footerText}>Settings</Text>
-        </View>
-      </View>
+      <Footer />
     </View>
   );
 };
@@ -97,13 +81,9 @@ const styles = StyleSheet.create({
   transactionHeader: { fontSize: 18, fontWeight: 'bold', padding: 20 },
   transaction: { flexDirection: 'row', justifyContent: 'space-between', alignItems: 'center', padding: 15 },
   transactionIcon: { width: 20, height: 20 },
-  transactionName: { fontSize: 16, paddingRight: 150, },
+  transactionName: { fontSize: 16, paddingRight: 150 },
   transactionCategory: { fontSize: 14, color: '#aaa' },
   transactionAmount: { fontSize: 16, fontWeight: 'bold' },
-  footer: { flexDirection: 'row', justifyContent: 'space-around', padding: 20, marginBottom: 15 },
-  footerItem: { alignItems: 'center' },
-  footerIcon: { width: 15, height: 15, marginBottom: 5 },
-  footerText: { fontSize: 12 },
 });
 
 export default HomeScreen;
